@@ -1,0 +1,367 @@
+{% load static %}
+
+{% load  widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelajak Yoshlari</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'distcss/css/adminlte.min.css' %}">
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img style="border-radius: 50%; height: 100px; width: 100px;" class="animation__wobble" src="{% static 'logotipp.jpg' %}" alt="AdminLTELogo" height="60" width="60">
+    <h1>Kelajak Yoshlari</h1>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="{% static 'lo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Kitoblardan iqtiboslar</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{% static 'logotipp.jpg' %}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="https://t.me/kelajakyoshlari4" class="d-block">@Kelajak yoshlari</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                boshsahifaga O'tish
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'dashboard' %}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>bosh sahifa</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Kitoblardan iqtiboslar</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fa fa-book"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">kitoblardan parchalar soni</span>
+                <span class="info-box-number">
+                  {% comment %} {{ income }} {% endcomment %}
+                  6
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">platformaga qiziqishlar</span>
+                <span class="info-box-number">42</span>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix hidden-md-up"></div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fa fa-book"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">kitoblardan parchalarga yozilgan comentariyalar</span>
+                <span class="info-box-number">43</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">foydalanuvchilar soni</span>
+                <span class="info-box-number">50</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          {% for books in book %}
+            <div class="col-12 col-sm-12 col-md-12">
+              <div class="info-box mb-3">
+                <div class="info-box-content">
+                  <span class=""><img style="height: 80px; width: 80px; border-radius: 50%;" src="{{ books.avatar }}"></span>
+                  <p>
+                    {{ books.text }}
+                  </p>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+          {% endfor %}
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="info-box mb-3">
+              <div class="info-box-content">
+                <p>
+                  <span class=""><img style="height: 80px; width: 80px; border-radius: 50%;" src="{% static 'as.png' %}"></span>
+                  Abdulla Oripov — ardoqli o'zbek shoiri va jamoat arbobi. Zamonaviy o'zbek she'riyatida inson qalbidagi murakkablik va ziddiyatlarni teran, haqqoniy o'ziga xos betakror kuylagan taniqli ijodkor. Oripov hozirgi o'zbek she'riyatiga yangicha badiiy tafakkur yo'sinlarini olib kirdi. U tub mohiyati bilan Yassaviy, Navoiy, Bobur, Cho'lpon, G'afur G'ulom singari ijodkorlar badiiy an'analarining davomchisi hisoblanadi. Shoir O'zbekiston Respublikasi Davlat madhiyasi she'ri muallifidir.
+
+                  Hayoti
+                  Abdulla Oripov 1941-yilning 21-martida Qashqadaryo] viloyati, Koson tumanidagi Neko'z qishlog'ida tug'ildi. Qishloq Qo'ng'irtov etagiga o'rnashgan bo'lib, oqar suv taqchil bo'lsa-da, seryomg'ir kelgan yillarda ko'kat-u maysalarga ko'milib qoladigan kengish joy edi. Bu haqida shoirning o'zi shunday yozadi:
+
+                  "Ayniqsa, bahor paytlarida bu yerlarga yog'in ko'p tushar, Qo'ng'irtov etaklari ming xil o't-o'lan, chuchmoma-yu qizg'aldoqlar bilan, quyonto'pig'-u ismaloq bilan, karrag-u hazorisfand bilan, qo'zigullar bilan qoplanar, tevarak-atrof jannatiy bir manzara kasb etardi. Sel suvlari to'planib qolgan kichik-kichik ko' llarni „qoq“ deyishardi. Uning toza suvini odamlar tashib ichishar, bola-baqra chuchmomay-u ismaloq, zamburug' terib, Qo'ng'irtov etaklarida kunlarini kech qilar edi"
+                </p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="info-box mb-3">
+              <div class="info-box-content">
+                <p>
+                  <span class=""><img style="height: 80px; width: 80px; border-radius: 50%;" src="{% static "img/o'tkir.jpg" %}"></span>
+                  Oʻtkir Hoshimov – taniqli oʻzbek yozuvchisi va jamoat arbobi. 1941-yili 5-avgustda Toshkentda Doʻmbirobod mahallasida tugʻilgan. Toshkent (2013-yil 24-may Juma kuni ogʻir hastalik tufayli Oilasi davrasida Toshkentda vafot etgan) Davlat universiteti filologiya fakultetida oʻqigan. Turli tahririyat va nashriyotlarda ishlagan. Shuningdek, u Oʻzbekiston Respublikasi Yozuvchilar qoʻmita raisi vazifasini bajargan.
+                  Hayoti
+                  Oʻtkir Hoshimov 1941-yil, 5-avgustda Toshkent shahrida oddiy bir oilada dunyoga keldi. Yozuvchining bolaligi urush va urushdan keyingi mashaqqatli davrga toʻgʻri keldi. „Oʻsha davrda non tanqis boʻlgani bilan kutubxonalarda kitob koʻp edi“¸ deya eslagan edi yozuvchi oʻz xotiralarida.[1]
+
+                  Kitob oʻqish barobarida Oʻtkir Hoshimov pochtada xat tarqatuvchi boʻlib ishladi. Aynan mana shu ish Oʻtkir Hoshimovni oddiy odamlarning kitobdagi hayotdan butunlay boshqa turmushiga oshno qildi.
+
+                  Boʻlajak yozuvchi 1964-yilda Oʻzbekiston Milliy universitetining (sobiq ToshDU) filologiya fakulteti jurnalistika boʻlimini sirtdan tugatdi.
+
+                  1959–1962-yillari „Qizil Oʻzbekiston“, 1963–1966-yil „Toshkent haqiqati“ 1966–1982-yillari „Toshkent oqshomi“ gazetalarida adabiy xodim boʻlib ishladi.Uning kitoblari juda qiziqarli va hayotiy kitob hisoblanadi
+                </p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="info-box mb-3">
+              <div class="info-box-content">
+                <p>
+                  <span class=""><img style="height: 80px; width: 80px; border-radius: 50%;" src="{% static 'img/Muhamad.jpg' %}"></span>
+                  Muhammad Yusuf, asl ism-sharifi Yusupov Muhammadjon (1954.26.4, Marhamat tumani — 2001.31.7, Ellikqalʼa tumani) — Oʻzbekiston xalq shoiri (1998) va jamoatMuhammad Yusuf 1954-yilning 26-aprelida tugʻilgan. Rus tili va adabiyoti institutining rus tili va adabiyoti fakultetini tugatgan (1978). Respublika kitobsevarlar jamiyati (1978-80), „Toshkent oqshomi“ gazetasida (1980-1986), Gʻafur Gʻulom nomidagi Adabiyot va sanʼat nashriyoti (1986-95)da turli lavozimlarda ishlagan. 1995-1997-yillar „Tafakkur“ jurnalida boʻlim mudiri, 1997-2001-yillarda Oʻzbekiston Yozuvchilar uyushmasida rais oʻrinbosari. II chaqiriq Oʻzbekiston Respublikasi Oliy Majlisi deputatlardan biri. Muhammad Yusufning dastlabki sheʼrlari „Oʻzbekiston adabiyoti va sanʼati“ haftaligida bosilgan (1976). Shundan boshlab respublika matbuotida uning sheʼr, ocherk va maqolalari muntazam ravishda chop etila boshlagan. Ilk sheʼrlar kitobi — „Tanish teraklar“ (1985). „Bulbulga bir gapim bor“ (1987), „Iltijo“ (1988), „Uyqudagi qiz“, „Halima enam allalari“ (1989), „Ishq kemasi“ (1990), „Koʻnglimda bir yor“ (1991), „Bevafo koʻp ekan“, „Yolgʻonchi yor“ (1993), „Erka kiyik“ (1995) va „Osmonimga olib ketaman“ (1998) sheʼriy kitoblari nashr etilgan. Mazkur kitoblarga kirgan sheʼrlarda Muhammad Yusufga mansub boʻlgan avlodning eng oliyjanob va yuksak insoniy fazilatlari bilan birga yoshlik sururi, ishq va muhabbatning nafis navolari, oʻzbekona, sodda, ayni paytda ezgu, bokira va betakror tuygʻu hamda kechinmalari oʻzining yorqin ifodasini topgan. Soʻzning badiiy imkoniyatlaridan mahorat bilan foydalanish, musiqiy ravonlik, tuygʻular tiniqligi, samimiylik va mayinlik, ruhiyat manzaralarini loʻnda va yakdil ifodalay bilish Muhammad Yusuf sheʼriy uslubining yetakchi xususiyatlaridir. Uning qalamiga mansub aksariyat sheʼrlar taniqli xonandalar tomonidan ijro etilmoqda. Muhammad Yusuf ijodi ayni gullab yashnagan paytda, Ellikqalʼa tumanida sheʼriyat muxlislari bilan uchrashish maqsadidagi ijodiy safarida vafot etgan. Andijonda dafn etilgan. Toshkent shahri va Marhamat tumanidagi koʻchalardan biri, shuningdek, Andijon shahridagi bolalar kutubxonasi va Marhamat tumanidagi sanʼat maktabi Muhammad Yusuf nomi bilan ataladi.
+                </p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="info-box mb-3">
+              <div class="info-box-content">
+                <p>
+                  <span class=""><img style="height: 80px; width: 80px; border-radius: 50%;" src="{% static 'img/Halima.jpg' %}"></span>
+                  Halima Xudoyberdiyeva (1947-yil 17-may, Boyovut — 2018-yil, Toshkent) — Oʻzbekiston xalq shoiri.
+                  Toshkent davlat universitetining jurnalistika fakultetini tugatgan (1972). Mehnat faoliyatini „Saodat“ jurnalida boʻlim boshligʻiligidan boshlagan (1972). Talabalik yillarida „Ilk muhabbat“ (1968) sheʼriy toʻplami chop etildi. Shoiraning „Oq olmalar“ (1973), „Chaman“ (1974) toʻplamlari izma-iz bosildi. Halima birdan oʻziga xos shoira sifatida tanildi. 1975—1977-yillarda Moskvadagi Adabiyot institutining Oliy Adabiyot kursida oʻqidi. Shu yillarda shoiraning „Beliye yabloki“ (Sovetskiy pisatel, 1977), „Suyanch togʻlarim“ (1976), „Bobo quyosh“ (1977) toʻplamlari bosildi. „Yosh gvardiya“ nashriyotida boʻlim boshligʻi (1978—1982), „Saodat“ jurnalida muharrir oʻrinbosari, 1984—1994-yillarda „Saodat“ning bosh muharriri, 1991—1994-yillarda Oʻzbekiston Respublikasi xotin-qizlar qoʻmitasi raisi boʻldi. Shoira sheʼrlarida oddiy dehqonlar, ona-yurt harorat bilan kuylandi. Mustaqillik yillarida Halima Xudoyberdiyeva xalq tarixi, mashhur ajdodlar haqida yozdi. „Muqaddas ayol“ (1987), „Bu kunlarga yetganlar bor“ (1993), „Toʻmarisning aytgani“ (1996), „Saylanma“ (2000) shoiraning muhim asarlaridir.
+                </p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="info-box mb-3">
+              <div class="info-box-content">
+                <p>
+                  <span class=""><img style="height: 80px; width: 80px; border-radius: 50%;" src="{% static 'img/ZahiridinMuhammadBobur.jpg' %}"></span>
+                  Bobur (taxallusi; toʻliq ismi Zahiriddin Muhammad ibn Umarshayx Mirzo; 14-fevral 1483 ; 26-dekabr 1530) — oʻzbek mumtoz adabiyotining yirik vakili, buyuk shoir, tarixchi, geograf, davlat arbobi, isteʼdodli sarkarda, boburiylar sulolasi asoschisi, temuriy shahzoda.[1] Bobur oʻz davrining buyuk shaxslaridan biridir. Uning sheʼrlari,ruboiylari oʻz vaqtida va hozir ham sevib oʻqilmoqda.
+                  Hayoti va ijodi
+                  Boburning otasi — Umarshayx Mirzo Fargʻona viloyati hokimi, onasi — Qutlugʻ Nigorxonim Moʻgʻuliston xoni va Toshkent hokimi Yunusxonning qizi edi. Boburning onasi oʻqimishli bo'lgan va oqila ayol boʻlib, Boburga hokimiyatni boshqarish ishlarida faol koʻmak bergan, harbiy yurishlarida unga hamrohlik qilgan. Umarshayx Mirzo xonadoni poytaxt Andijonning arki ichida yashar edi. Hokim yoz oylari Sirdaryo boʻyida, Axsida, yilning qolgan faslini Andijonda oʻtkazardi. Boburning yoshligi Andijonda oʻtgan. Bobur barcha temuriy shahzodalar kabi maxsus tarbiyachilar, yirik fozil-u ulamolar ustozligida harbiy taʼlim, fiqx ilmi, arab va fors tillarini oʻrganadi, koʻplab tarixiy va adabiy asarlar mutolaa qiladi, ilm-fanga, sheʼriyatga qiziqa boshlaydi. Dovyurakligi va jasurligi uchun u yoshligidan „Bobur“ („Sher“) laqabini oladi.
+
+                  Bobur otasi yoʻlidan borib, mashhur so'fiy — Xoja Ahrorga ixlos qoʻyadi va uning tariqati ruhida voyaga yetadi, umrining oxiriga qadar shu eʼtiqodga sodiq qoladi. Keyinchalik, „Boburnoma“ asarida Bobur Xoja Ahror ruhi bir necha bor uni muqarrar halokatdan, xastalik va chorasizlikdan xalos etganini, eng ogʻir sharoitlarda rahnamolik qilganligini taʼkidlaydi. Otasi Axsida bevaqt, 39 yoshida fojiali halok boʻlgach, oilaning katta farzandi, 12 yoshli Bobur valiahd sifatida taxtga oʻtiradi (1494-yil iyun).
+                </p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="info-box mb-3">
+              <div class="info-box-content">
+                <p>
+                  <span class=""><img style="height: 80px; width: 80px; border-radius: 50%;" src="{% static 'AlisherNavoiy.jpg' %}"></span>
+                  Alisher Navoiy (9-fevral 1441-yil — 3-yanvar 1501-yil) — ulugʻ oʻzbek va boshqa turkiy xalqlarning shoiri, mutafakkiri va davlat arbobi boʻlgan . Gʻarbda chigʻatoy adabiyotining buyuk vakili deb qaraladi, sharqda „nizomi millati va din“ (din va millatning nizomi) unvoni bilan ulugʻlanadi.
+                  Ali Yazdiy nazariga tushgan, Mavlono Lutfiy yosh shoir isteʼdodiga yuqori baho bergan, Kamol Turbatiy eʼtirofini qozongan. Sayyid Hasan Ardasher, Pahlavon Muhammad kabi ustozlardan taʼlim olgan, Abdurahmon Jomiy bilan ijodiy hamkorlikda boʻlgan. Navoiy 1469-yilgacha temuriylar orasidagi ichki nizolar sababli Hirotdan yiroqroqda yashagan.
+                  Husayn Boyqaro Xuroson taxtiga oʻtirgach (1469), Navoiy hayoti va ijodida yangi bosqich boshlanadi, muhrdorlik (1469) mansabiga, vazirlik (1472) va Astrobod hokimligi (1487)ga tayinlanadi. 1480-1500-yillar mobaynida oʻz mablagʻlari hisobidan bir necha madrasa, 40 rabot (safardagi yoʻlovchilar toʻxtab oʻtish joyi), 17 masjid, 10 xonaqoh, 9 hammom, 9 koʻprik, 20 ta hovuz qurdiradi. Husayn Boyqaro Alisher Navoiyga „muqarrabi hazrati sultoniy“ („sulton hazratlarining eng yaqin kishisi“) degan unvonni beradi. Unga koʻra Navoiy davlatning barcha ishlariga aralasha olardi.
+                  Alisher Navoiy tarjimai holi oʻz davrida Xondamir, Vosifiy, Husayn Boyqaro, Bobur kabi tarixchi va davlat arboblarining asarlarida aks etgan.
+                </p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>    
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong> &copy; 2022-2023 <a href="https://adminlte.io">Kelajak Yoshlari</a>. biz bilan bo'ling</strong>
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- overlayScrollbars -->
+<script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'distcss/js/adminlte.js' %}"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="{% static 'plugins/jquery-mousewheel/jquery.mousewheel.js' %}"></script>
+<script src="{% static 'plugins/raphael/raphael.min.js' %}"></script>
+<script src="{% static 'plugins/jquery-mapael/jquery.mapael.min.js' %}"></script>
+<script src="{% static 'plugins/jquery-mapael/maps/usa_states.min.js' %}"></script>
+<!-- ChartJS -->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="{% static 'distcss/js/demo.js' %}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{% static 'distcss/js/pages/dashboard2.js' %}"></script>
+</body>
+</html>

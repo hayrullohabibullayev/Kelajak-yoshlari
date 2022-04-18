@@ -1,0 +1,87 @@
+{% load static %}
+
+{% load  widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Kelajak yoshlari</title>
+    <meta name="author" content="Codeconvey" />
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'csss/style.css' %}">
+    
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" type="text/css" href="{% static 'csss/demo.css' %}" />
+	
+</head>
+<body>
+		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+            <!-- AD -->
+        </div>
+        <div class="col-rt-2">
+            <ul>
+                <li><a href="{% url 'dashboard' %}">Bosh sahifa</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>Siz Murojaat sahifasida kelajak yoshlariga o'z taklifingiz yoki sayt haqida bildirishlar va savollaringizni yozishingiz mumkun.</h1>
+                <p><img style="height: 50px; width: 50px; border-radius: 50%;" src="{% static 'logotipp.jpg' %}">Kelajak yoshlari har bir taklifni va murojaatlarni qo'llab quvvatlaydi</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+              
+<!-- partial:index.partial.html -->
+<section id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="comment">
+        <p v-for="items in item" v-text="items"></p>
+          </div><!--End Comment-->
+          </div><!--End col -->
+          </div><!-- End row -->
+      <div class="row">
+        <form method="POST">
+          {% csrf_token %}
+          <div class="col-6">
+            <span style="height: 55px; ">{% render_field form.telefon_raqam type="text" class="input" placeholder="Telefon raqam" %}</span>
+            {% render_field form.murojaat  type="text" class="input" placeholder="murojaat" v-model="newItem" @keyup.enter="addItem()" %}
+            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Jo'natmoq</button>
+          </div><!-- End col -->
+        </form>  
+      </div><!--End Row -->
+    </div><!--End Container -->
+  </section><!-- end App -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script  src="{% static 'jss/script.js' %}"></script>
+           
+    		</div>
+		</div>
+    </div>
+</section>
+     
+
+<!-- Analytics -->
+
+	</body>
+</html>

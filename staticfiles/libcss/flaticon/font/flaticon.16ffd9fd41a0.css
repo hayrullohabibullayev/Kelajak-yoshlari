@@ -1,0 +1,42 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 12/11/2020 10:28
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.b93962dcc98d.eot");
+  src: url("./Flaticon.b93962dcc98d.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.0cc51b05f31d.woff2") format("woff2"),
+       url("./Flaticon.47445a866c73.woff") format("woff"),
+       url("./Flaticon.1cebc2858fa5.ttf") format("truetype"),
+       url("./Flaticon.d60e0dc3bede.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.d60e0dc3bede.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-stairs:before { content: "\f100"; }
+.flaticon-living-room:before { content: "\f101"; }
+.flaticon-brickwall:before { content: "\f102"; }
+.flaticon-kitchen:before { content: "\f103"; }
+.flaticon-bedroom:before { content: "\f104"; }
+.flaticon-house:before { content: "\f105"; }
+.flaticon-bathroom:before { content: "\f106"; }
+.flaticon-office:before { content: "\f107"; }
+.flaticon-email:before { content: "\f108"; }
+.flaticon-telephone:before { content: "\f109"; }

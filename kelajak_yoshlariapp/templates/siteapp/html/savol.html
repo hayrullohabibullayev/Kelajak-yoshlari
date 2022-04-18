@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com">
+
+  <title>Kelajak Yoshlari</title>
+
+  <link rel="stylesheet" href="{% static 'assets2/vendor/animate/animate.css' %}">
+
+  <link rel="stylesheet" href="{% static 'assets2/css/bootstrap.css' %}">
+
+  <link rel="stylesheet" href="{% static 'assets2/css/maicons.css' %}">
+
+  <link rel="stylesheet" href="{% static 'assets2/vendor/owl-carousel/css/owl.carousel.css' %}">
+
+  <link rel="stylesheet" href="{% static 'assets2/css/theme.css' %}">
+
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Kelajak Yoshlari <span class="text-primary">V</span>iktorina savol javob bo'limi</a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <div class="ml-auto">
+            <a href="{% url 'dashboard' %}" class="btn btn-outline rounded-pill">Bosh sahifa</a>
+            <a href="{% url 'ab' %}" class="btn btn-outline rounded-pill">Viktorina</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-banner home-banner">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-6 py-3 wow fadeInUp">
+            <h1 class="mb-4">Savol Javoblarda Qatnashish Shartlari</h1>
+            <p class="text-lg mb-5">Savol Javoblarda Qatnashish Shartlari Juda Oddiy. 1-dan Savollar Bo'limiga Kirib Savollar bilan Tanishib Chiqish 2-dan Javoblar bo'limiga Kirib Aynan Qaysi Savolga Javob berayotganingizni belgilagan holda javob yozish.</p>
+
+            <a href="{% url 'savol' %}" class="btn btn-outline border text-secondary">Savol</a>
+            <a href="{% url 'javob' %}" class="btn btn-primary btn-split ml-2">Javob<div class="fab"><span class="mai-play"></span></div></a>
+          </div>
+          <div class="col-lg-6 py-3 wow zoomIn">
+            <div class="img-place">
+              <img src="{% static 'assets2/img/bg_image_1.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-section features">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 col-lg-12 py-12 wow fadeInUp">
+            <div class="d-flex flex-row">
+              <div class="img-fluid mr-3">
+                <img style="border-radius: 50%; height: 50px; width: 50px;" src="{% static 'logotipp.jpg' %}" alt="">
+              </div>
+              <div>
+                <h5>Kelajak yoshlaridan Savollarga Javoblar yozib o'rin olganlar uchun sovrin</h5>
+                <p>Har bir To'g'ri Javobga 500so'm pul mukofoti</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- .container -->
+    </div>
+  </main>
+
+  <script src="{% static 'assets2/js/jquery-3.5.1.min.js' %}"></script>
+
+  <script src="{% static 'assets2/js/bootstrap.bundle.min.js' %}"></script>
+
+  <script src="{% static 'assets2/vendor/wow/wow.min.js' %}"></script>
+
+  <script src="{% static 'assets2/vendor/owl-carousel/js/owl.carousel.min.js' %}"></script>
+
+  <script src="{% static 'assets2/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+
+  <script src="{% static 'assets2/vendor/animateNumber/jquery.animateNumber.min.js' %}"></script>
+
+  <script src="{% static 'assets2/js/google-maps.js' %}"></script>
+
+  <script src="{% static 'assets2/js/theme.js' %}"></script>
+
+
+</body>
+</html>
